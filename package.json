@@ -1,0 +1,41 @@
+{
+  "name": "@exec402/react",
+  "version": "0.1.5",
+  "description": "React hooks and components for exec402 protocol",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": ">=5.0.0",
+    "react": ">=18.0.0",
+    "viem": ">=2.0.0",
+    "wagmi": ">=2.0.0"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^5.80.7",
+    "@types/react": "^18.3.0",
+    "react": "^18.3.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "viem": "^2.38.6",
+    "wagmi": "^2.17.0"
+  },
+  "dependencies": {
+    "@exec402/core": "^0.1.5"
+  }
+}
