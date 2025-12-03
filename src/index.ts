@@ -14,12 +14,18 @@ export {
   type CanisterInfo,
   type CallTaskPayload,
   type TransferTaskPayload,
+  type ChainConfig,
+  type TokenPriceResult,
   parseCallTaskPayload,
   parseTransferTaskPayload,
   TESTNET_CHAINS,
   MAINNET_CHAINS,
   getChainConfig,
   getChainConfigs,
+  getAllChainConfigs,
+  getChainConfigByNetwork,
+  getChainConfigByNetworkAndChainId,
   getDefaultChainConfig,
+  getTokenPrice,
 } from "@exec402/core";
 

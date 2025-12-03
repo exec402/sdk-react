@@ -10,4 +10,4 @@ export {
   useEstimateTxFee,
   type UseEstimateTxFeeParams,
 } from "./useEstimateTxFee";
-
+export { useChainConfig, useDefaultChainConfig } from "./useChainConfig";

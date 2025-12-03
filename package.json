@@ -1,6 +1,6 @@
 {
   "name": "@exec402/react",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "React hooks and components for exec402 protocol",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
