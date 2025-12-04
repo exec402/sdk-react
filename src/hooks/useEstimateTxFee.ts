@@ -5,19 +5,13 @@ import { usePublicClient } from "wagmi";
 import type { Task } from "@exec402/core";
 import { useExecClient } from "../context";
 
-export interface UseEstimateTxFeeParams {
-  task: Task | undefined;
-  enabled?: boolean;
-}
-
 export function useEstimateTxFee(
-  params: UseEstimateTxFeeParams,
+  task: Task | undefined,
   queryOptions?: Omit<
     UseQueryOptions<number | null, Error>,
-    "queryKey" | "queryFn" | "enabled"
+    "queryKey" | "queryFn"
   >
 ) {
-  const { task, enabled = true } = params;
   const client = useExecClient();
   const publicClient = usePublicClient({ chainId: task?.chainId });
 
@@ -30,7 +24,7 @@ export function useEstimateTxFee(
 
       return client.estimateTxFee(publicClient, task);
     },
-    enabled: enabled && !!publicClient && !!task && !!task.attestorSignature,
+    enabled: !!publicClient && !!task && !!task.attestorSignature,
     staleTime: 60_000, // 1 minute
     ...queryOptions,
   });

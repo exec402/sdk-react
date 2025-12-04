@@ -6,8 +6,5 @@ export { useTasks } from "./useTasks";
 export { useExecuteCall } from "./useExecuteCall";
 export { useExecuteTransfer } from "./useExecuteTransfer";
 export { useTokenPrice, type UseTokenPriceParams } from "./useTokenPrice";
-export {
-  useEstimateTxFee,
-  type UseEstimateTxFeeParams,
-} from "./useEstimateTxFee";
+export { useEstimateTxFee } from "./useEstimateTxFee";
 export { useChainConfig, useDefaultChainConfig } from "./useChainConfig";
