@@ -8,3 +8,4 @@ export { useExecuteTransfer } from "./useExecuteTransfer";
 export { useTokenPrice, type UseTokenPriceParams } from "./useTokenPrice";
 export { useEstimateTxFee } from "./useEstimateTxFee";
 export { useChainConfig, useDefaultChainConfig } from "./useChainConfig";
+export { useVerifyTask } from "./useVerifyTask";
