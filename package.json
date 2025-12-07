@@ -1,6 +1,6 @@
 {
   "name": "@exec402/react",
-  "version": "0.3.9",
+  "version": "0.4.0",
   "description": "React hooks and components for exec402 protocol",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -36,6 +36,6 @@
     "wagmi": "^2.17.0"
   },
   "dependencies": {
-    "@exec402/core": "^0.3.9"
+    "@exec402/core": "^0.4.0"
   }
 }
