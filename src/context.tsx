@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useMemo, type ReactNode } from "react";
-import { useWalletClient } from "wagmi";
+import { useAccount, useWalletClient } from "wagmi";
 import { ExecClient, type ExecNetwork } from "@exec402/core";
 
 interface ExecContextValue {
@@ -20,7 +20,8 @@ export function ExecProvider({
   children,
   network = "testnet",
 }: ExecProviderProps) {
-  const { data: walletClient } = useWalletClient();
+  const { chainId } = useAccount();
+  const { data: walletClient } = useWalletClient({ chainId });
 
   const client = useMemo(
     () =>
